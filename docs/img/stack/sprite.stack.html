@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG stack preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-account-dims { width: 30px; height: 29px; }
+	.svg-arrow-dims { width: 13px; height: 10px; }
+	.svg-balloon-dims { width: 17px; height: 16px; }
+	.svg-best-price-dims { width: 30px; height: 29px; }
+	.svg-box-dims { width: 24px; height: 24px; }
+	.svg-buyer-dims { width: 39px; height: 36px; }
+	.svg-cart-dims { width: 28px; height: 28px; }
+	.svg-catalog-dims { width: 19px; height: 14px; }
+	.svg-category-1-dims { width: 32px; height: 28px; }
+	.svg-category-2-dims { width: 32px; height: 25px; }
+	.svg-category-3-dims { width: 19px; height: 32px; }
+	.svg-category-4-dims { width: 32px; height: 19px; }
+	.svg-category-5-dims { width: 32px; height: 22px; }
+	.svg-category-6-dims { width: 19px; height: 32px; }
+	.svg-category-7-dims { width: 17px; height: 32px; }
+	.svg-category-8-dims { width: 32px; height: 28px; }
+	.svg-category-9-dims { width: 24px; height: 32px; }
+	.svg-check-dims { width: 24px; height: 24px; }
+	.svg-chevron-dims { width: 10px; height: 6px; }
+	.svg-close-dims { width: 14px; height: 14px; }
+	.svg-compare-dims { width: 28px; height: 28px; }
+	.svg-crown-dims { width: 34px; height: 34px; }
+	.svg-delete-dims { width: 24px; height: 24px; }
+	.svg-delivery-dims { width: 37px; height: 27px; }
+	.svg-design-dims { width: 30px; height: 37px; }
+	.svg-dotted-dims { width: 103px; height: 3px; }
+	.svg-dotted-2-dims { width: 196px; height: 3px; }
+	.svg-email-dims { width: 18px; height: 18px; }
+	.svg-exchange-dims { width: 29px; height: 29px; }
+	.svg-favorites-dims { width: 28px; height: 28px; }
+	.svg-free-shipping-dims { width: 15px; height: 15px; }
+	.svg-grid-view-dims { width: 20px; height: 20px; }
+	.svg-instagram-dims { width: 31px; height: 31px; }
+	.svg-led-dims { width: 15px; height: 15px; }
+	.svg-light-bulb-dims { width: 512px; height: 512px; }
+	.svg-location-dims { width: 16px; height: 20px; }
+	.svg-minus-dims { width: 20px; height: 20px; }
+	.svg-moisture-protection-dims { width: 15px; height: 15px; }
+	.svg-one-click-dims { width: 13px; height: 20px; }
+	.svg-phone-dims { width: 512px; height: 512px; }
+	.svg-phone-2-dims { width: 18px; height: 18px; }
+	.svg-plus-dims { width: 20px; height: 20px; }
+	.svg-prod-cart-dims { width: 18px; height: 18px; }
+	.svg-prod-compare-dims { width: 14px; height: 12px; }
+	.svg-prod-favorite-dims { width: 16px; height: 14px; }
+	.svg-products-dims { width: 34px; height: 34px; }
+	.svg-question-dims { width: 22px; height: 23px; }
+	.svg-route-dims { width: 18px; height: 18px; }
+	.svg-row-view-dims { width: 20px; height: 20px; }
+	.svg-search-dims { width: 20px; height: 20px; }
+	.svg-smart-house-dims { width: 15px; height: 12px; }
+	.svg-socket-dims { width: 29px; height: 29px; }
+	.svg-socket-2-dims { width: 29px; height: 29px; }
+	.svg-star-dims { width: 14px; height: 13px; }
+	.svg-star-2-dims { width: 14px; height: 11px; }
+	.svg-stop-dims { width: 20px; height: 20px; }
+	.svg-subscribe-dims { width: 19px; height: 16px; }
+	.svg-switch-dims { width: 512px; height: 512px; }
+	.svg-telegramm-dims { width: 24px; height: 24px; }
+	.svg-time-dims { width: 18px; height: 18px; }
+	.svg-vertical-more-dims { width: 3px; height: 18px; }
+	.svg-viber-dims { width: 24px; height: 24px; }
+	.svg-vk-dims { width: 31px; height: 31px; }
+	.svg-warranty-dims { width: 25px; height: 29px; }
+	.svg-whatsapp-dims { width: 24px; height: 24px; }
+	.svg-yandex-market-dims { width: 30px; height: 32px; }
+	.svg-youtube-dims { width: 31px; height: 31px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG stack preview</h1>
+			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+
+-->
+
+			<ul>
+
+				<li title="account">
+					<div class="icon-box">
+
+						<!-- account -->
+						<img src="../icons/sprite-icons.svg#account" class="svg-account-dims" alt="account"/>
+
+					</div>
+					<h2>account</h2>
+				</li>
+				<li title="arrow">
+					<div class="icon-box">
+
+						<!-- arrow -->
+						<img src="../icons/sprite-icons.svg#arrow" class="svg-arrow-dims" alt="arrow"/>
+
+					</div>
+					<h2>arrow</h2>
+				</li>
+				<li title="balloon">
+					<div class="icon-box">
+
+						<!-- balloon -->
+						<img src="../icons/sprite-icons.svg#balloon" class="svg-balloon-dims" alt="balloon"/>
+
+					</div>
+					<h2>balloon</h2>
+				</li>
+				<li title="best-price">
+					<div class="icon-box">
+
+						<!-- best-price -->
+						<img src="../icons/sprite-icons.svg#best-price" class="svg-best-price-dims" alt="best-price"/>
+
+					</div>
+					<h2>best-price</h2>
+				</li>
+				<li title="box">
+					<div class="icon-box">
+
+						<!-- box -->
+						<img src="../icons/sprite-icons.svg#box" class="svg-box-dims" alt="box"/>
+
+					</div>
+					<h2>box</h2>
+				</li>
+				<li title="buyer">
+					<div class="icon-box">
+
+						<!-- buyer -->
+						<img src="../icons/sprite-icons.svg#buyer" class="svg-buyer-dims" alt="buyer"/>
+
+					</div>
+					<h2>buyer</h2>
+				</li>
+				<li title="cart">
+					<div class="icon-box">
+
+						<!-- cart -->
+						<img src="../icons/sprite-icons.svg#cart" class="svg-cart-dims" alt="cart"/>
+
+					</div>
+					<h2>cart</h2>
+				</li>
+				<li title="catalog">
+					<div class="icon-box">
+
+						<!-- catalog -->
+						<img src="../icons/sprite-icons.svg#catalog" class="svg-catalog-dims" alt="catalog"/>
+
+					</div>
+					<h2>catalog</h2>
+				</li>
+				<li title="category-1">
+					<div class="icon-box">
+
+						<!-- category-1 -->
+						<img src="../icons/sprite-icons.svg#category-1" class="svg-category-1-dims" alt="category-1"/>
+
+					</div>
+					<h2>category-1</h2>
+				</li>
+				<li title="category-2">
+					<div class="icon-box">
+
+						<!-- category-2 -->
+						<img src="../icons/sprite-icons.svg#category-2" class="svg-category-2-dims" alt="category-2"/>
+
+					</div>
+					<h2>category-2</h2>
+				</li>
+				<li title="category-3">
+					<div class="icon-box">
+
+						<!-- category-3 -->
+						<img src="../icons/sprite-icons.svg#category-3" class="svg-category-3-dims" alt="category-3"/>
+
+					</div>
+					<h2>category-3</h2>
+				</li>
+				<li title="category-4">
+					<div class="icon-box">
+
+						<!-- category-4 -->
+						<img src="../icons/sprite-icons.svg#category-4" class="svg-category-4-dims" alt="category-4"/>
+
+					</div>
+					<h2>category-4</h2>
+				</li>
+				<li title="category-5">
+					<div class="icon-box">
+
+						<!-- category-5 -->
+						<img src="../icons/sprite-icons.svg#category-5" class="svg-category-5-dims" alt="category-5"/>
+
+					</div>
+					<h2>category-5</h2>
+				</li>
+				<li title="category-6">
+					<div class="icon-box">
+
+						<!-- category-6 -->
+						<img src="../icons/sprite-icons.svg#category-6" class="svg-category-6-dims" alt="category-6"/>
+
+					</div>
+					<h2>category-6</h2>
+				</li>
+				<li title="category-7">
+					<div class="icon-box">
+
+						<!-- category-7 -->
+						<img src="../icons/sprite-icons.svg#category-7" class="svg-category-7-dims" alt="category-7"/>
+
+					</div>
+					<h2>category-7</h2>
+				</li>
+				<li title="category-8">
+					<div class="icon-box">
+
+						<!-- category-8 -->
+						<img src="../icons/sprite-icons.svg#category-8" class="svg-category-8-dims" alt="category-8"/>
+
+					</div>
+					<h2>category-8</h2>
+				</li>
+				<li title="category-9">
+					<div class="icon-box">
+
+						<!-- category-9 -->
+						<img src="../icons/sprite-icons.svg#category-9" class="svg-category-9-dims" alt="category-9"/>
+
+					</div>
+					<h2>category-9</h2>
+				</li>
+				<li title="check">
+					<div class="icon-box">
+
+						<!-- check -->
+						<img src="../icons/sprite-icons.svg#check" class="svg-check-dims" alt="check"/>
+
+					</div>
+					<h2>check</h2>
+				</li>
+				<li title="chevron">
+					<div class="icon-box">
+
+						<!-- chevron -->
+						<img src="../icons/sprite-icons.svg#chevron" class="svg-chevron-dims" alt="chevron"/>
+
+					</div>
+					<h2>chevron</h2>
+				</li>
+				<li title="close">
+					<div class="icon-box">
+
+						<!-- close -->
+						<img src="../icons/sprite-icons.svg#close" class="svg-close-dims" alt="close"/>
+
+					</div>
+					<h2>close</h2>
+				</li>
+				<li title="compare">
+					<div class="icon-box">
+
+						<!-- compare -->
+						<img src="../icons/sprite-icons.svg#compare" class="svg-compare-dims" alt="compare"/>
+
+					</div>
+					<h2>compare</h2>
+				</li>
+				<li title="crown">
+					<div class="icon-box">
+
+						<!-- crown -->
+						<img src="../icons/sprite-icons.svg#crown" class="svg-crown-dims" alt="crown"/>
+
+					</div>
+					<h2>crown</h2>
+				</li>
+				<li title="delete">
+					<div class="icon-box">
+
+						<!-- delete -->
+						<img src="../icons/sprite-icons.svg#delete" class="svg-delete-dims" alt="delete"/>
+
+					</div>
+					<h2>delete</h2>
+				</li>
+				<li title="delivery">
+					<div class="icon-box">
+
+						<!-- delivery -->
+						<img src="../icons/sprite-icons.svg#delivery" class="svg-delivery-dims" alt="delivery"/>
+
+					</div>
+					<h2>delivery</h2>
+				</li>
+				<li title="design">
+					<div class="icon-box">
+
+						<!-- design -->
+						<img src="../icons/sprite-icons.svg#design" class="svg-design-dims" alt="design"/>
+
+					</div>
+					<h2>design</h2>
+				</li>
+				<li title="dotted">
+					<div class="icon-box">
+
+						<!-- dotted -->
+						<img src="../icons/sprite-icons.svg#dotted" class="svg-dotted-dims" alt="dotted"/>
+
+					</div>
+					<h2>dotted</h2>
+				</li>
+				<li title="dotted-2">
+					<div class="icon-box">
+
+						<!-- dotted-2 -->
+						<img src="../icons/sprite-icons.svg#dotted-2" class="svg-dotted-2-dims" alt="dotted-2"/>
+
+					</div>
+					<h2>dotted-2</h2>
+				</li>
+				<li title="email">
+					<div class="icon-box">
+
+						<!-- email -->
+						<img src="../icons/sprite-icons.svg#email" class="svg-email-dims" alt="email"/>
+
+					</div>
+					<h2>email</h2>
+				</li>
+				<li title="exchange">
+					<div class="icon-box">
+
+						<!-- exchange -->
+						<img src="../icons/sprite-icons.svg#exchange" class="svg-exchange-dims" alt="exchange"/>
+
+					</div>
+					<h2>exchange</h2>
+				</li>
+				<li title="favorites">
+					<div class="icon-box">
+
+						<!-- favorites -->
+						<img src="../icons/sprite-icons.svg#favorites" class="svg-favorites-dims" alt="favorites"/>
+
+					</div>
+					<h2>favorites</h2>
+				</li>
+				<li title="free-shipping">
+					<div class="icon-box">
+
+						<!-- free-shipping -->
+						<img src="../icons/sprite-icons.svg#free-shipping" class="svg-free-shipping-dims" alt="free-shipping"/>
+
+					</div>
+					<h2>free-shipping</h2>
+				</li>
+				<li title="grid-view">
+					<div class="icon-box">
+
+						<!-- grid-view -->
+						<img src="../icons/sprite-icons.svg#grid-view" class="svg-grid-view-dims" alt="grid-view"/>
+
+					</div>
+					<h2>grid-view</h2>
+				</li>
+				<li title="instagram">
+					<div class="icon-box">
+
+						<!-- instagram -->
+						<img src="../icons/sprite-icons.svg#instagram" class="svg-instagram-dims" alt="instagram"/>
+
+					</div>
+					<h2>instagram</h2>
+				</li>
+				<li title="led">
+					<div class="icon-box">
+
+						<!-- led -->
+						<img src="../icons/sprite-icons.svg#led" class="svg-led-dims" alt="led"/>
+
+					</div>
+					<h2>led</h2>
+				</li>
+				<li title="light-bulb">
+					<div class="icon-box">
+
+						<!-- light-bulb -->
+						<img src="../icons/sprite-icons.svg#light-bulb" class="svg-light-bulb-dims" alt="light-bulb"/>
+
+					</div>
+					<h2>light-bulb</h2>
+				</li>
+				<li title="location">
+					<div class="icon-box">
+
+						<!-- location -->
+						<img src="../icons/sprite-icons.svg#location" class="svg-location-dims" alt="location"/>
+
+					</div>
+					<h2>location</h2>
+				</li>
+				<li title="minus">
+					<div class="icon-box">
+
+						<!-- minus -->
+						<img src="../icons/sprite-icons.svg#minus" class="svg-minus-dims" alt="minus"/>
+
+					</div>
+					<h2>minus</h2>
+				</li>
+				<li title="moisture-protection">
+					<div class="icon-box">
+
+						<!-- moisture-protection -->
+						<img src="../icons/sprite-icons.svg#moisture-protection" class="svg-moisture-protection-dims" alt="moisture-protection"/>
+
+					</div>
+					<h2>moisture-protection</h2>
+				</li>
+				<li title="one-click">
+					<div class="icon-box">
+
+						<!-- one-click -->
+						<img src="../icons/sprite-icons.svg#one-click" class="svg-one-click-dims" alt="one-click"/>
+
+					</div>
+					<h2>one-click</h2>
+				</li>
+				<li title="phone">
+					<div class="icon-box">
+
+						<!-- phone -->
+						<img src="../icons/sprite-icons.svg#phone" class="svg-phone-dims" alt="phone"/>
+
+					</div>
+					<h2>phone</h2>
+				</li>
+				<li title="phone-2">
+					<div class="icon-box">
+
+						<!-- phone-2 -->
+						<img src="../icons/sprite-icons.svg#phone-2" class="svg-phone-2-dims" alt="phone-2"/>
+
+					</div>
+					<h2>phone-2</h2>
+				</li>
+				<li title="plus">
+					<div class="icon-box">
+
+						<!-- plus -->
+						<img src="../icons/sprite-icons.svg#plus" class="svg-plus-dims" alt="plus"/>
+
+					</div>
+					<h2>plus</h2>
+				</li>
+				<li title="prod-cart">
+					<div class="icon-box">
+
+						<!-- prod-cart -->
+						<img src="../icons/sprite-icons.svg#prod-cart" class="svg-prod-cart-dims" alt="prod-cart"/>
+
+					</div>
+					<h2>prod-cart</h2>
+				</li>
+				<li title="prod-compare">
+					<div class="icon-box">
+
+						<!-- prod-compare -->
+						<img src="../icons/sprite-icons.svg#prod-compare" class="svg-prod-compare-dims" alt="prod-compare"/>
+
+					</div>
+					<h2>prod-compare</h2>
+				</li>
+				<li title="prod-favorite">
+					<div class="icon-box">
+
+						<!-- prod-favorite -->
+						<img src="../icons/sprite-icons.svg#prod-favorite" class="svg-prod-favorite-dims" alt="prod-favorite"/>
+
+					</div>
+					<h2>prod-favorite</h2>
+				</li>
+				<li title="products">
+					<div class="icon-box">
+
+						<!-- products -->
+						<img src="../icons/sprite-icons.svg#products" class="svg-products-dims" alt="products"/>
+
+					</div>
+					<h2>products</h2>
+				</li>
+				<li title="question">
+					<div class="icon-box">
+
+						<!-- question -->
+						<img src="../icons/sprite-icons.svg#question" class="svg-question-dims" alt="question"/>
+
+					</div>
+					<h2>question</h2>
+				</li>
+				<li title="route">
+					<div class="icon-box">
+
+						<!-- route -->
+						<img src="../icons/sprite-icons.svg#route" class="svg-route-dims" alt="route"/>
+
+					</div>
+					<h2>route</h2>
+				</li>
+				<li title="row-view">
+					<div class="icon-box">
+
+						<!-- row-view -->
+						<img src="../icons/sprite-icons.svg#row-view" class="svg-row-view-dims" alt="row-view"/>
+
+					</div>
+					<h2>row-view</h2>
+				</li>
+				<li title="search">
+					<div class="icon-box">
+
+						<!-- search -->
+						<img src="../icons/sprite-icons.svg#search" class="svg-search-dims" alt="search"/>
+
+					</div>
+					<h2>search</h2>
+				</li>
+				<li title="smart-house">
+					<div class="icon-box">
+
+						<!-- smart-house -->
+						<img src="../icons/sprite-icons.svg#smart-house" class="svg-smart-house-dims" alt="smart-house"/>
+
+					</div>
+					<h2>smart-house</h2>
+				</li>
+				<li title="socket">
+					<div class="icon-box">
+
+						<!-- socket -->
+						<img src="../icons/sprite-icons.svg#socket" class="svg-socket-dims" alt="socket"/>
+
+					</div>
+					<h2>socket</h2>
+				</li>
+				<li title="socket-2">
+					<div class="icon-box">
+
+						<!-- socket-2 -->
+						<img src="../icons/sprite-icons.svg#socket-2" class="svg-socket-2-dims" alt="socket-2"/>
+
+					</div>
+					<h2>socket-2</h2>
+				</li>
+				<li title="star">
+					<div class="icon-box">
+
+						<!-- star -->
+						<img src="../icons/sprite-icons.svg#star" class="svg-star-dims" alt="star"/>
+
+					</div>
+					<h2>star</h2>
+				</li>
+				<li title="star-2">
+					<div class="icon-box">
+
+						<!-- star-2 -->
+						<img src="../icons/sprite-icons.svg#star-2" class="svg-star-2-dims" alt="star-2"/>
+
+					</div>
+					<h2>star-2</h2>
+				</li>
+				<li title="stop">
+					<div class="icon-box">
+
+						<!-- stop -->
+						<img src="../icons/sprite-icons.svg#stop" class="svg-stop-dims" alt="stop"/>
+
+					</div>
+					<h2>stop</h2>
+				</li>
+				<li title="subscribe">
+					<div class="icon-box">
+
+						<!-- subscribe -->
+						<img src="../icons/sprite-icons.svg#subscribe" class="svg-subscribe-dims" alt="subscribe"/>
+
+					</div>
+					<h2>subscribe</h2>
+				</li>
+				<li title="switch">
+					<div class="icon-box">
+
+						<!-- switch -->
+						<img src="../icons/sprite-icons.svg#switch" class="svg-switch-dims" alt="switch"/>
+
+					</div>
+					<h2>switch</h2>
+				</li>
+				<li title="telegramm">
+					<div class="icon-box">
+
+						<!-- telegramm -->
+						<img src="../icons/sprite-icons.svg#telegramm" class="svg-telegramm-dims" alt="telegramm"/>
+
+					</div>
+					<h2>telegramm</h2>
+				</li>
+				<li title="time">
+					<div class="icon-box">
+
+						<!-- time -->
+						<img src="../icons/sprite-icons.svg#time" class="svg-time-dims" alt="time"/>
+
+					</div>
+					<h2>time</h2>
+				</li>
+				<li title="vertical-more">
+					<div class="icon-box">
+
+						<!-- vertical-more -->
+						<img src="../icons/sprite-icons.svg#vertical-more" class="svg-vertical-more-dims" alt="vertical-more"/>
+
+					</div>
+					<h2>vertical-more</h2>
+				</li>
+				<li title="viber">
+					<div class="icon-box">
+
+						<!-- viber -->
+						<img src="../icons/sprite-icons.svg#viber" class="svg-viber-dims" alt="viber"/>
+
+					</div>
+					<h2>viber</h2>
+				</li>
+				<li title="vk">
+					<div class="icon-box">
+
+						<!-- vk -->
+						<img src="../icons/sprite-icons.svg#vk" class="svg-vk-dims" alt="vk"/>
+
+					</div>
+					<h2>vk</h2>
+				</li>
+				<li title="warranty">
+					<div class="icon-box">
+
+						<!-- warranty -->
+						<img src="../icons/sprite-icons.svg#warranty" class="svg-warranty-dims" alt="warranty"/>
+
+					</div>
+					<h2>warranty</h2>
+				</li>
+				<li title="whatsapp">
+					<div class="icon-box">
+
+						<!-- whatsapp -->
+						<img src="../icons/sprite-icons.svg#whatsapp" class="svg-whatsapp-dims" alt="whatsapp"/>
+
+					</div>
+					<h2>whatsapp</h2>
+				</li>
+				<li title="yandex-market">
+					<div class="icon-box">
+
+						<!-- yandex-market -->
+						<img src="../icons/sprite-icons.svg#yandex-market" class="svg-yandex-market-dims" alt="yandex-market"/>
+
+					</div>
+					<h2>yandex-market</h2>
+				</li>
+				<li title="youtube">
+					<div class="icon-box">
+
+						<!-- youtube -->
+						<img src="../icons/sprite-icons.svg#youtube" class="svg-youtube-dims" alt="youtube"/>
+
+					</div>
+					<h2>youtube</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Mon, 12 Dec 2022 09:05:28 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

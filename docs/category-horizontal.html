@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+	<title>Каталог - Горизонтальная карточка</title>
+	<meta charset="UTF-8">
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="files/libs/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="files/libs/ion.rangeSlider.min.css"/>
+	<link rel="stylesheet" href="files/libs/fancybox.min.css"/>
+
+	<link rel="stylesheet" href="css/style.min.css">
+
+</head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+	<div class="header__top top-header">
+		<div class="top-header__content container">
+			<div class="top-header__menu menu-top"  data-da=".catalog-header__for-mb-menu,991,10">
+				<nav class="menu-top__body">
+					<ul class="menu-top__list">
+						<!-- Активный пункт меню/текущая страница должны быть в span -->
+						<li class="menu-top__item"><span class="menu-top__link">О нас</span></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Оплата</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Доставка</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Оптовикам</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Гарантия и возврат</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Контакты</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Реквизиты</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Наша выставка</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Дизайнерам</a></li>
+						<li class="menu-top__item"><a href="#" class="menu-top__link">Новости</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="header__body body-header">
+		<div class="body-header__content container">
+			<div class="body-header__column logo-header">
+				<a class="logo-header__link" href="/">
+					<img class="logo-header__icon" src="img/logo.png" alt="Логотип в шапке">
+				</a>
+			</div>
+			<div class="body-header__column body-header__column--info body-header__column--info--js">
+				<div class="body-header__info info-header">
+					<div class="info-header__column info-header__column--location">
+						<div class="info-header__location">
+							<svg class="info-header__location-icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#location"></use>
+							</svg>
+							<a class="info-header__location-link link-modal-js" href="#city-choice" >
+								Москва
+								<svg class="icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+								</svg>
+							</a>
+						</div>
+						<p class="info-header__address"><span>БЦ Тушино</span> Походный проезд, д. 4, корп. 1, 4-й этаж, офис 412 (пн-пт: 09:00-18:00)</p>
+					</div>
+					<div class="info-header__column info-header__column--contacts">
+						<div class="info-header__messengers">
+							<a href="#" class="info-header__messenger info-header__messenger--telegramm">
+								<svg class="info-header__messenger-icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#telegramm"></use>
+								</svg>
+							</a>
+							<a href="#" class="info-header__messenger info-header__messenger--whatsapp">
+								<svg class="info-header__messenger-icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#whatsapp"></use>
+								</svg>
+							</a>
+							<a href="#" class="info-header__messenger info-header__messenger--viber">
+								<svg class="info-header__messenger-icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#viber"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="info-header__contacts">
+							<div class="info-header__contact">
+								<a class="info-header__email-link" href="mailto:zakaz@werkel-kupit.ru" >zakaz@werkel-kupit.ru</a>
+							</div>
+							<div class="info-header__contact">
+								<a class="info-header__phone-link" href="tel:84951234567" >+7 (495) 001-46-69</a>
+							</div>						
+							<a class="info-header__callback callback-link link-modal-js" href="#modal-call">
+								Заказать&nbsp;звонок
+								<svg class="callback-link__icon info-header__callback-icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#dotted"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body-header__column body-header__column--links">
+				<div class="body-header__links links-header">
+					<a class="links-header__item" href="#">
+						<div class="links-header__img">
+							<svg class="links-header__icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#account"></use>
+							</svg>
+						</div>
+						<div class="links-header__title">Вход<br>Регистрация</div> 						
+					</a>
+					<a class="links-header__item" href="#">
+						<div class="links-header__img">
+							<svg class="links-header__icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#favorites"></use>
+							</svg>
+							<span>99</span>
+						</div>
+
+						<div class="links-header__title">Избранное</div> 						
+					</a>
+					<a class="links-header__item" href="#">
+						<div class="links-header__img">
+							<svg class="links-header__icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#compare"></use>
+							</svg>
+							<span>1</span>
+						</div>
+
+						<div class="links-header__title">Сравнить</div> 						
+					</a>
+					<a class="links-header__item" href="#">
+						<div class="links-header__img">
+							<svg class="links-header__icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#cart"></use>
+							</svg>
+							<span>5</span>
+						</div>
+
+						<div class="links-header__title">Корзина</div> 						
+						<div class="links-header__amount">999&nbsp;000&nbsp;₽</div>
+					</a>
+				</div>
+
+			</div>
+			<div class="body-header__column body-header__column--phone-mobile">
+				<button class="body-header__phone-btn mob-phone-js" type="button">
+					<svg class="body-header__phone-btn-icon icon-svg">
+						<use xlink:href="img/icons/sprite-icons.svg#phone"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom bottom-header">
+		<div class="bottom-header__content container">
+			<div class="bottom-header__catalog" data-da=".body-header__content,991,3">
+				<button class="bottom-header__catalog-btn catalog-btn-js" type="button" >
+					<svg class="bottom-header__catalog-icon icon-svg">
+						<use xlink:href="img/icons/sprite-icons.svg#catalog"></use>
+					</svg>
+					Каталог
+				</button>
+			</div>
+			<div class="bottom-header__body">
+				<nav class="bottom-header__nav" >
+					<ul class="bottom-header__list">
+						<!-- Активный пункт меню/текущая страница должны быть в span, с классом active -->
+						<li class="bottom-header__item"><a href="#" class="bottom-header__link">
+							<svg class="bottom-header__link-icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#smart-house"></use>
+							</svg> Умные механизмы</a>
+							<div class="bottom-header__submenu">
+								<ul class="bottom-header__sublist">
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 1 какое-то очень длинное название категории</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 2</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 3</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 4</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 5</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="bottom-header__item"><a href="#" class="bottom-header__link">Розетки</a>
+							<div class="bottom-header__submenu">
+								<ul class="bottom-header__sublist">
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 1</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 2</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 3</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 4</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 5</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="bottom-header__item"><a href="#" class="bottom-header__link">Коллекции рамок</a>
+							<div class="bottom-header__submenu">
+								<ul class="bottom-header__sublist">
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 1</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 2</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 3</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 4</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 5</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="bottom-header__item"><a href="#" class="bottom-header__link">Выключатели</a>
+							<div class="bottom-header__submenu">
+								<ul class="bottom-header__sublist">
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 1</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 2</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 3</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 4</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 5</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="bottom-header__item"><a href="#" class="bottom-header__link">Накладные механизмы</a>
+							<div class="bottom-header__submenu">
+								<ul class="bottom-header__sublist">
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 1</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 2</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 3</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 4</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 5</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="bottom-header__item"><a href="#" class="bottom-header__link">Терморегуляторы</a>
+							<div class="bottom-header__submenu">
+								<ul class="bottom-header__sublist">
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 1</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 2</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 3</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 4</a></li>
+									<li class="bottom-header__subitem"><a href="#" class="bottom-header__sublink">Подкатегория 5</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<a href="#" class="bottom-header__more-link">
+					Ещё
+					<svg class="bottom-header__more-icon icon-svg">
+						<use xlink:href="img/icons/sprite-icons.svg#vertical-more"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="bottom-header__important">
+				<svg class="bottom-header__important-icon icon-svg">
+					<use xlink:href="img/icons/sprite-icons.svg#stop"></use>
+				</svg>
+				Остерегайтесь подделок
+			</div>
+		</div>
+	</div>
+	<div class="header__catalog catalog-header">
+		<div class="catalog-header__container container">
+			<div class="catalog-header__content">			
+				<button class="catalog-header__close-btn catalog-header__close-btn--js" type="button">
+					<svg class="catalog-header__close-btn-icon icon-svg">
+						<use xlink:href="img/icons/sprite-icons.svg#close"></use>
+					</svg>
+				</button>
+				<ul class="catalog-header__list">
+					<li class="catalog-header__item"><span href="#" class="catalog-header__link active">Розетки Werkel</span></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Выключатели Werkel</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Favorit</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Snabb</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Palacio</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Antik</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Stark</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Stream</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Elite</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Platinum</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Acrylic</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Aluminium</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Fiore</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Hammer</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Diamant</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Рамки Metallic</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Werkel Retro</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Накладные механизмы</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Удлинители</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Терморегуляторы</a></li>
+					<li class="catalog-header__item"><a href="#" class="catalog-header__link">Клеммы соединительные</a></li>
+				</ul>
+				<div class="catalog-header__for-mb-menu"></div>
+			</div>			
+		</div>
+	</div>
+</header>
+
+<div class="container">
+	<div class="main-search">
+			<form>
+				<div class="main-search__input-wrap">
+					<input class="main-search__input" name="text" type="text" placeholder="Поиск по сайту" autocomplete="off">
+				</div>
+				<button class="main-search__btn"> 
+					<svg class="main-search__icon icon-svg">
+						<use xlink:href="img/icons/sprite-icons.svg#search"></use>
+					</svg>
+				</button>
+			</form>
+	</div>
+</div>
+
+
+            <main class="page category">
+                <div class="container">
+                    <div class="page__row">
+                        <aside class="page__sidebar sidebar">
+                            
+                            <form class="sidebar__filter category-filter">
+                                <button class="category-filter__close-btn category-filter__close-btn--js" type="button">
+                                    <svg class="category-filter__close-btn-icon icon-svg">
+                                        <use xlink:href="img/icons/sprite-icons.svg#close"></use>
+                                    </svg>
+                                </button>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Цена
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body">
+                                        <div class="category-filter__price filter-price range-wrap">
+                                            <div class="filter-price__values">													
+                                                <div class="filter-price__value">
+                                                    <input class="filter-price__input input_from " type="text" value=""/>
+                                                </div>                                                
+                                                <div class="filter-price__value">
+                                                    <input class="filter-price__input input_to " type="text" value=""/>
+                                                </div>													
+                                            </div>
+                                            <input class="range-slider-js" type="text" data-min="190" data-max="360000"/>
+                                        </div>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Бренд
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="Eurosvet" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Eurosvet</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="Bogate's" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Bogate's</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="TK Lighting" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">TK Lighting</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="Elektrostandard" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Elektrostandard</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Источник света
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="сменная лампа" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">сменная лампа</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="встроенные LED" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">встроенные LED</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Количество ламп 
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body">
+                                        <div class="category-filter__price filter-price range-wrap">
+                                            <div class="filter-price__values">													
+                                                <div class="filter-price__value">
+                                                    <input class="filter-price__input input_from " type="text" value=""/>
+                                                </div>                                                
+                                                <div class="filter-price__value">
+                                                    <input class="filter-price__input input_to " type="text" value=""/>
+                                                </div>													
+                                            </div>
+                                            <input class="range-slider-js" type="text" data-min="1" data-max="48"/>
+                                        </div>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Лампы в комплекте
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="1" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">1</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="2" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">2</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="3" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">3</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Стиль
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="1" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">1</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="2" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">2</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="3" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">3</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Цоколь
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="1" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">1</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="2" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">2</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="3" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">3</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Размер
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="1" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">1</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="2" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">2</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="3" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">3</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                            </form>
+                            <div class="sidebar__bottom">
+                                <div class="sidebar__consultant consultant-block">
+                                    <div class="consultant-block__name">
+                                        Антонина Игоревна
+                                    </div>
+                                    <div class="consultant-block__position">
+                                        Консультант
+                                    </div>
+                                    <div class="consultant-block__avatar">
+                                        <picture>
+                                            <!-- <source type="image/webp" srcset="img/.webp"> -->
+                                            <img class="consultant-block__img" src="img/consultant.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <a class="consultant-block__button main-button link-modal-js" href="#modal-call">
+                                        <svg class="main-button__icon icon-svg">
+                                            <use xlink:href="img/icons/sprite-icons.svg#balloon"></use>
+                                        </svg>
+                                        Задать вопрос
+                                    </a>
+                                </div>
+                                <div class="sidebar__banner banner">
+                                    <div class="banner__title">
+                                        <span>Оплата</span><br>
+                                        <span>в&nbsp;рассрочку</span>                              
+                                    </div>
+                                    <div class="banner__text">
+                                        <span>Забирай сейчас,</span><br>  
+                                        <span>плати потом</span>                                    
+                                    </div>
+                                    <div class="banner__bottom">
+                                        <img class="banner__logo" src="img/rassrochka-1.png" alt="Логотип Сбербанк">
+                                        <img class="banner__logo" src="img/rassrochka-2.png" alt="Логотип Тинькофф">
+                                        <img class="banner__logo" src="img/rassrochka-3.png" alt="Логотип банка">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </aside>
+                        <div class="page__body">
+                            <nav class="page__breadcrumbs breadcrumbs" aria-label="breadcrumb">
+                                <ol class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/">Главная</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <span>Светильники</span>
+                                    </li>                                    
+                                </ol>                                
+                            </nav>
+                            <div class="page__head">
+                                <h1>Светильники</h1>
+                                <span class="page__head-amount">217 товаров</span>
+                            </div>
+
+                            <div class="category__tabs tabs variation-tabs">
+                                <div class="tabs__caption variation-tabs__caption">
+                                    <button class="tabs__btn variation-tabs__btn active" type="button">Тип</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Назначение</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Потолки</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Размер</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Стиль</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Цвет</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Декор</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Материал</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Страна</button>
+                                    <button class="tabs__btn variation-tabs__btn" type="button">Бренд</button>
+                                </div>
+                                <div class="tabs__wrap variation-tabs__wrap">
+                                    <div class="tabs__content active">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-1"></use>
+                                                </svg>
+                                                <span>Люстры</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-2"></use>
+                                                </svg>
+                                                <span>Потолочные светильники</span>
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-3"></use>
+                                                </svg>
+                                                <span>Подвесные светильники</span>
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-4"></use>
+                                                </svg>
+                                                <span>Трековые светильники</span>
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-5"></use>
+                                                </svg>
+                                                <span>Настенные светильники</span>
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-6"></use>
+                                                </svg>
+                                                <span>Настольная лампа</span>
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-7"></use>
+                                                </svg>
+                                                <span>Напольная лампа</span>
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-8"></use>
+                                                </svg>
+                                                <span>Линейные светильники</span>
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">
+                                                <svg class="variation-tabs__link-icon icon-svg">
+                                                    <use xlink:href="img/icons/sprite-icons.svg#category-9"></use>
+                                                </svg>
+                                                <span>Уличное освещение</span>
+                                            </a>
+                                        </div>                                        
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Ванная</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Дача</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Детская</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Гостинная</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Кухня</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Офис</span> 
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>2.50 м</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>2.60 м</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>2.70 м</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>2.80 м</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>2.90 м</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>3.00 м</span> 
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Маленькие</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Средние</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Большие</span> 
+                                            </a>                                                                                      
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Современный</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Классика</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Минимализм</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Модерн</span> 
+                                            </a>      
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Лофт</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Хай-тек</span> 
+                                            </a>                                                                               
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Белые</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Бежевые</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Золотые</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Серебрянные</span> 
+                                            </a>      
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Хром</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Черные</span> 
+                                            </a>                                                                               
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Декор 1</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Декор 2</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Декор 3</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Декор 4</span> 
+                                            </a>      
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Декор 5</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Декор 6</span> 
+                                            </a>                                                                               
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Материал 1</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Материал 2</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Материал 3</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Материал 4</span> 
+                                            </a>      
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Материал 5</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Материал 6</span> 
+                                            </a>                                                                               
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Страна 1</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Страна 2</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Страна 3</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Страна 4</span> 
+                                            </a>      
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Страна 5</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Страна 6</span> 
+                                            </a>                                                                               
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="variation-tabs__content">
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Бренд 1</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Бренд 2</span> 
+                                            </a>
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Бренд 3</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Бренд 4</span> 
+                                            </a>      
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Бренд 5</span> 
+                                            </a>   
+                                            <a class="variation-tabs__link" href="#">                                                
+                                                <span>Бренд 6</span> 
+                                            </a>                                                                               
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form class="category__line-filter line-filter">
+                                <fieldset class="line-filter__item">
+                                    <select class="line-filter__sort">
+                                        <option value="pop">По популярности</option>
+                                        <option value="min">Сначала недорогие</option>
+                                        <option value="max">Сначала недорогие</option>                                        
+                                    </select>
+                                    <label class="line-filter__input custom-checkbox">
+                                        <input class="custom-checkbox__input" value="Акции" name="checkbox" type="checkbox" checked>
+                                        <span class="line-filter__text">Акции</span>
+                                    </label>
+                                    <label class="line-filter__input custom-checkbox">
+                                        <input class="custom-checkbox__input" value="Скидка" name="checkbox" type="checkbox" >
+                                        <span class="line-filter__text">Скидка</span>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="line-filter__item">
+                                    <div class="line-filter__subtitle">
+                                        Показать по:
+                                    </div>
+                                    <div class="line-filter__amount-card">
+                                        <label class="line-filter__radio custom-radio">
+                                            <input class="custom-radio__input" value="36" name="amount-card" type="radio" checked >
+                                            <span class="custom-radio__text">36</span>
+                                        </label>
+                                        <label class="line-filter__radio custom-radio">
+                                            <input class="custom-radio__input" value="72" name="amount-card" type="radio" >
+                                            <span class="custom-radio__text">72</span>
+                                        </label>
+                                    </div>
+                                    <div class="line-filter__view-card">
+                                        <label class="line-filter__radio custom-radio">
+                                            <input class="custom-radio__input" value="grid-view" name="view-card" type="radio" checked >
+                                            <svg class="custom-radio__icon icon-svg">
+                                                <use xlink:href="img/icons/sprite-icons.svg#grid-view"></use>
+                                            </svg>                                            
+                                        </label>
+                                        <label class="line-filter__radio custom-radio">
+                                            <input class="custom-radio__input" value="row-view" name="view-card" type="radio" >
+                                            <svg class="custom-radio__icon icon-svg">
+                                                <use xlink:href="img/icons/sprite-icons.svg#row-view"></use>
+                                            </svg>  
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                            </form>
+
+                            <button class="category__filter-btn filter-btn-js" type="button">
+                                Фильтр
+                            </button>
+
+                            <div class="category__catalog products-catalog">
+                                <div class="products-catalog__wrap products-catalog__wrap--horizontal">
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-2.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div>
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <!-- <div class="prod-item__discount">
+                                                        -30%
+                                                    </div> -->
+                                                </div>
+                                                <div class="prod-item__price">29 900 <span>₽</span></div>
+                                                <!-- <div class="prod-item__price prod-item__price--new">41 900 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                               -->
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Потолочная люстра в стиле лофт</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>                                    
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-6.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <!-- <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div> -->
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">5 400 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Трековый светодиодный светильник для однофазно...</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-7.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <!-- <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div> -->
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">8 400 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Настенный светильник</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-8.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#led"></use>
+                                                            </svg>
+                                                            Светодиодный LED</div>
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">41 900 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Подвесной светильник со стеклянными плафонами</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-9.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div>
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <!-- <div class="prod-item__discount">
+                                                        -30%
+                                                    </div> -->
+                                                </div>
+                                                <div class="prod-item__price">29 900 <span>₽</span></div>
+                                                <!-- <div class="prod-item__price prod-item__price--new">41 900 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                               -->
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Потолочная люстра в стиле лофт</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>                                    
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-3.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <!-- <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div> -->
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">5 400 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Трековый светодиодный светильник для однофазно...</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-5.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <!-- <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div> -->
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">8 400 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Настенный светильник</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-1.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#led"></use>
+                                                            </svg>
+                                                            Светодиодный LED</div>
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">41 900 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Подвесной светильник со стеклянными плафонами</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-10.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div>
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <!-- <div class="prod-item__discount">
+                                                        -30%
+                                                    </div> -->
+                                                </div>
+                                                <div class="prod-item__price">29 900 <span>₽</span></div>
+                                                <!-- <div class="prod-item__price prod-item__price--new">41 900 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                               -->
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Потолочная люстра в стиле лофт</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>                                    
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-11.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <!-- <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div> -->
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">5 400 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Трековый светодиодный светильник для однофазно...</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-12.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <!-- <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#moisture-protection"></use>
+                                                            </svg>
+                                                            Влагозащита</div> -->
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">8 400 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Настенный светильник</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="products-catalog__item products-catalog__item--horizontal">
+                                        <div class="prod-item prod-item--horizontal">
+                                            <div class="prod-item__body">
+                                                <div class="prod-item__picture">
+                                                    <a class="prod-item__img-wrap" href="#" >
+                                                        <picture>
+                                                            <img class="prod-item__img" src="img/tovar-13.jpg" alt="">
+                                                        </picture>                                                
+                                                    </a>
+                                                    <div class="prod-item__labels">
+                                                        <div class="prod-item__label prod-item__label--new">
+                                                            <svg class="prod-item__label-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#led"></use>
+                                                            </svg>
+                                                            Светодиодный LED</div>
+                                                    </div>
+                                                    <div class="prod-item__add-to">
+                                                        <button class="prod-item__add-to-btn add-to-compare" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="prod-item__add-to-btn add-to-favorite" type="button">
+                                                            <svg class="prod-item__add-to-btn-icon icon-svg">
+                                                                <use xlink:href="img/icons/sprite-icons.svg#prod-favorite"></use>
+                                                            </svg>
+                                                        </button>    
+                                                    </div>
+                                                    <div class="prod-item__discount">
+                                                        -30%
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="prod-item__price">5 400 <span>₽</span></div> -->
+                                                <div class="prod-item__price prod-item__price--new">41 900 <span>₽</span></div>  
+                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div>                                              
+                                                <div class="prod-item__vendor">minimir</div>
+                                                <div class="prod-item__title">Подвесной светильник со стеклянными плафонами</div>
+                                            </div>
+        
+                                            <div class="prod-item__bottom bottom-prod">
+                                                <button class="bottom-prod__item prod-item__add-cart" type="submit">
+                                                    <svg class="prod-item__add-cart-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#prod-cart"></use>
+                                                    </svg>
+                                                    В корзину
+                                                </button>
+                                                <a class="bottom-prod__item prod-item__show-link" href="#">Посмотреть</a>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="products-catalog__more-btn">
+                                    <button class="more-btn" type="button">Показать еще</button>
+                                </div>
+                                <div class="products-catalog__pagination pagination">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item current">1</li>
+                                        <li class="pagination__item">2</li>
+                                        <li class="pagination__item">3</li>
+                                        <li class="pagination__item dots">...</li>
+                                        <li class="pagination__item">411</li>
+                                    </ul>
+                                    <div class="pagination__btn">
+                                        <button class="btn-pagination" type="button">Вперед</button>
+                                    </div>
+                                </div>                                
+                            </div>
+
+                            <div class="category__content-bottom page__text">
+                                <div class="like-h1-title">
+                                    Интернет-магазин
+                                </div> 
+                                <p>Мы рады приветствовать вас на сайте нашего интернет-магазина!</p>
+                                <p>В обширном каталоге магазина - только актуальные и востребованные товары высокого качества и по оптимальным ценам. В магазине MiniMir каждый найдет светотехнику по вкусу: интерьерное и уличное освещение, лампы, электротехнику для ЖКХ, а также фонари, дверные звонки, системы «Умный дом» и многое другое.</p>
+                                <div class="text-subtitle">
+                                    Каталог товаров укомплектован качественными фотографиями
+                                </div>
+                                <p>Подробными описаниями и полными техническими характеристиками каждого продукта. Вся продукция перед реализацией проходит тщательный многоступенчатый контроль. Товары поставляются напрямую от производителя и имеют сертификаты качества и гарантии. Мы обеспечиваем полный комплекс клиентского и логистического сервиса. В магазине MiniMir каждый найдет светотехнику по вкусу: интерьерное и уличное освещение, лампы, электротехнику для ЖКХ, а также фонари, дверные звонки, системы «Умный дом» и многое другое. </p>
+
+                                <div class="text-subtitle">
+                                    Каталог товаров укомплектован качественными фотографиями
+                                </div>
+                                <p>Подробными описаниями и полными техническими характеристиками каждого продукта. Вся продукция перед реализацией проходит тщательный многоступенчатый контроль. Товары поставляются напрямую от производителя и имеют сертификаты качества и гарантии. Мы обеспечиваем полный комплекс клиентского и логистического сервиса. В магазине MiniMir каждый найдет светотехнику по вкусу: интерьерное и уличное освещение, лампы, электротехнику для ЖКХ, а также фонари, дверные звонки, системы «Умный дом» и многое другое. </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+
+                </div><!-- /container -->  
+
+                
+            </main>
+            <footer class="footer">
+	<div class="button-up"></div>
+	<div class="footer__top top-footer">
+		<div class="container">
+			<form class="top-footer__form subscribe-form"  >
+				<div class="subscribe-form__title">
+					Подпишитесь на рассылку, чтобы узнавать об акциях первым!
+				</div>
+				<div class="subscribe-form__input-wrap">
+					<input class="subscribe-form__input main-input" name="email" type="email" placeholder="Email" required>
+					<button class="subscribe-form__btn main-button" type="submit">
+						<svg class="main-button__icon icon-svg">
+							<use xlink:href="img/icons/sprite-icons.svg#subscribe"></use>
+						</svg>
+						Подписаться</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="footer__body">
+		<div class="body-footer  container">
+			<div class="body-footer__col footer-info">
+				<div class="body-header__column logo-header">
+					
+				</div>
+				<div class="body-footer__logo logo-footer">
+					<a class="logo-footer__link" href="/">
+						<img src="img/logo-white.png" alt="Логотип в футере">
+					</a>					
+				</div>
+				<div class="footer-info__messenger">
+					<a class="footer-info__messenger-link" href="#" >
+						<svg class="footer-info__messenger-icon icon-svg">
+							<use xlink:href="img/icons/sprite-icons.svg#telegramm"></use>
+						</svg>
+					</a>
+					<a class="footer-info__messenger-link" href="#" >
+						<svg class="footer-info__messenger-icon icon-svg">
+							<use xlink:href="img/icons/sprite-icons.svg#whatsapp"></use>
+						</svg>
+					</a>	
+				</div>
+				<div class="footer-info__phones phones-footer">
+					<div class="phones-footer__item phone-item">
+						<a class="phones-footer__link phone-item__link" href="tel:84951234567" >8 (495) 123-45-67</a>
+						<span>Москва и МО</span>
+					</div>
+					<div class="phones-footer__item phone-item">
+						<a class="phones-footer__link phone-item__link" href="tel:88001234567" >8 (800) 123-45-67</a>
+						<span>Бесплатно по России</span>
+					</div>
+					<a class="phones-footer__callback callback-link link-modal-js" href="#modal-call">
+						Заказать&nbsp;звонок
+						<svg class="callback-link__icon icon-svg">
+							<use xlink:href="img/icons/sprite-icons.svg#dotted"></use>
+						</svg>
+					</a>
+					<div class="phones-footer__time text-footer">
+						Ежедневно, с&nbsp;09:00 до&nbsp;21:00
+					</div>
+				</div>
+				<div class="footer-info__location">
+					<div class="footer-info__location-title">
+						Бизнес-центр «Тушино»
+					</div>
+					<div class="footer-info__location-text text-footer">
+						Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж
+					</div>			
+				</div>
+				<div class="footer-info__copyright text-footer" data-da=".footer-menu__copy-for-mobile,991,last">
+					Копирайт: 2020 — 2022г. «Интернет-магазин» товаров для Умного дома» ©
+				</div>
+				<a class="footer-info__politics politics-link" href="#" data-da=".footer-menu__copy-for-mobile,991,first">
+					Политика конфиденциальности
+					<svg class="politics-link__icon icon-svg">
+						<use xlink:href="img/icons/sprite-icons.svg#dotted-2"></use>
+					</svg>
+				</a>
+	
+			</div>
+			<div class="body-footer__col footer-menu">
+				<div class="footer-menu__wrap">
+					<div class="footer-menu__item">
+						<div class="footer-menu__title">
+							Каталог
+						</div>
+						<nav>
+							<ul class="footer-menu__list">
+								<!-- Активный пункт меню/текущая страница должны быть в span с классом active -->
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Умный дом</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Освещение для дома</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Уличное освещение</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Розетки и выключатели</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Электротовары</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Посуда и принадлежности</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer-menu__item">
+						<div class="footer-menu__title">
+							Помощь покупателю
+						</div>
+						<nav>
+							<ul class="footer-menu__list">
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="/" >Главная</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Оплата и доставка</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Акции</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer-menu__item">
+						<div class="footer-menu__title">
+							О компании
+						</div>
+						<nav>
+							<ul class="footer-menu__list">
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >О компании</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="/kontakty.html" >Контакты</a></li>
+								<li class="footer-menu__list-item"><a class="footer-menu__link" href="#" >Дизайнерам</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-menu__links-wrap">
+					<div class="footer-menu__links-block links-block">
+						<div class="links-block__title">
+							Давайте дружить
+						</div>
+						<div class="links-block__icons">
+							<a class="links-block__link" href="#" >
+								<svg class="links-block__icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#instagram"></use>
+								</svg>
+							</a>
+							<a class="links-block__link" href="#" >
+								<svg class="links-block__icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#vk"></use>
+								</svg>
+							</a>
+							<a class="links-block__link" href="#" >
+								<svg class="links-block__icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#youtube"></use>
+								</svg>
+							</a>
+							<a class="links-block__link" href="#" >
+								<svg class="links-block__icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#telegramm"></use>
+								</svg>
+							</a>
+							<a class="links-block__link" href="#" >
+								<svg class="links-block__icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#whatsapp"></use>
+								</svg>
+							</a>
+							<a class="links-block__link" href="#" >
+								<svg class="links-block__icon icon-svg">
+									<use xlink:href="img/icons/sprite-icons.svg#yandex-market"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer-menu__links-block links-block">
+						<div class="links-block__title">
+							Принимаем к оплате
+						</div>
+						<div class="links-block__icons">
+							<img class="links-block__img" src="img/pay/visa.svg" alt="Виза">
+							<img class="links-block__img" src="img/pay/mastercard.svg" alt="Mastercard">
+							<img class="links-block__img" src="img/pay/maestro.svg" alt="Maestro">
+							<img class="links-block__img" src="img/pay/mir.svg" alt="Мир">
+							<img class="links-block__img" src="img/pay/yandex.svg" alt="Яндекс">
+							<img class="links-block__img" src="img/pay/webmoney.svg" alt="Webmoney">
+							<img class="links-block__img" src="img/pay/qiwi.svg" alt="Виза">
+						</div>
+					</div>
+				</div>				
+				<div class="footer-menu__copy-for-mobile"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+</footer>
+
+<!-- Modals-->
+<div class="modal modal--call" id="modal-call" style="display: none">
+	<div class="modal__title">
+		Обратный звонок
+	</div>
+	<div class="modal__text">
+		Укажите контактный контактный телефон, и мы перезвоним вам в ближайшее время
+	</div>
+	<form class="modal__form-call form-call" >
+		<input class="form-call__input custom-text-input" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+		<input class="form-call__input custom-text-input" name="Имя" type="text" placeholder="Ваше имя" required="required"/>
+		<button class="form-call__btn secondary-btn" type="submit">Отправить</button>
+	</form>
+	<div class="modal__polite">
+		Нажимая кнопку “Отправить”, Вы даете свое согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+	</div>
+
+</div>
+
+<div class="modal modal--call" id="modal-call-analog" style="display: none">
+	<div class="modal__title">
+		Подобрать аналог
+	</div>
+	<div class="modal__text">
+		Укажите контактный контактный телефон, и мы перезвоним вам в ближайшее время
+	</div>
+	<form class="modal__form-call form-call" >
+		<input class="form-call__input custom-text-input" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+		<input class="form-call__input custom-text-input" name="Имя" type="text" placeholder="Ваше имя" required="required"/>
+		<button class="form-call__btn secondary-btn" type="submit">Отправить</button>
+	</form>
+	<div class="modal__polite">
+		Нажимая кнопку “Отправить”, Вы даете свое согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+	</div>
+
+</div>
+
+<div class="modal modal--call" id="modal-call-reduce-price" style="display: none">
+	<div class="modal__title">
+		Нашли дешевле?<br>Снизим цену!
+	</div>
+	<div class="modal__text">
+		Укажите ссылку на этот товар в другом магазине, и мы сделаем Вам более выгодное предложение.
+	</div>
+	<form class="modal__form-call form-call" >
+		<input class="form-call__input custom-text-input" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+		<input class="form-call__input custom-text-input" name="Имя" type="text" placeholder="Ваше имя" required="required"/>
+		<input class="form-call__input custom-text-input" name="Ссылка" type="text" placeholder="https://" required="required"/>
+		<button class="form-call__btn secondary-btn" type="submit">Отправить</button>
+	</form>
+	<div class="modal__polite">
+		Нажимая кнопку “Отправить”, Вы даете свое согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+	</div>
+</div>
+
+<div class="modal modal--call" id="modal-call-credit" style="display: none">
+	<div class="modal__title">
+		Купить в рассрочку.
+	</div>
+	<div class="modal__text">
+		При покупке данного товара вы можете воспользоваться рассрочкой.
+	</div>
+	<div class="modal__polite">
+		Узнать подробнее об <a href="#">условиях рассрочки</a>.
+	</div>
+</div>
+
+<div class="modal modal--order" id="one-click-order" style="display: none">
+	<div class="modal__title">
+		Оформление быстрого заказа
+	</div>
+	<div class="modal__text">
+		Оставьте свои контактные данные и наш менеджер перезвонит вам в рабочее время и уточнит все детали
+	</div>
+	<form class="modal__form-order form-order" >
+		<div class="form-order__product product-form">
+			<div class="product-form__img-wrap">
+				<img class="product-form__img" src="img/product-1.jpg" alt="">
+			</div>
+			<div class="product-form__body">
+				<div class="product-form__title">
+					Подвесной светильник со стеклянными плафонами
+				</div>
+				<div class="product-form__vendor">
+					Код товара: 645839-5835
+				</div>
+				<div class="product-form__price-block">
+					<div class="product-form__price-wrap">
+						<!-- <div class="product-form__price">
+							41 900 <span>₽</span>
+						</div> -->
+						<div class="product-form__price product-form__price--new">
+							41 900 <span>₽</span>
+						</div>
+						<div class="product-form__price product-form__price--old">
+							60 900 <span>₽</span>
+						</div>
+					</div>				
+					<div class="product-form__counter custom-counter">       
+						<button class="custom-counter__btn custom-counter__btn--minus" type="button" disabled="disabled" data-type="minus" >
+							<svg class="custom-counter__btn-icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#minus"></use>
+							</svg>
+						</button>
+						<input class="custom-counter__input" type="text" name="count" value="1">
+						<button  class="custom-counter__btn custom-counter__btn--plus" type="button" data-type="plus">
+							<svg class="custom-counter__btn-icon icon-svg">
+								<use xlink:href="img/icons/sprite-icons.svg#plus"></use>
+							</svg>
+						</button>                                        
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="form-order__phone-block">
+			<input class="form-order__input custom-text-input" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+			<button class="form-order__btn secondary-btn" type="submit">Оформить заказ</button>
+		</div>		
+	</form>
+</div>
+
+<div class="modal modal--city" id="city-choice" style="display: none">
+	<div class="modal__title">
+		Выберите ваш город
+	</div>
+	<div class="city-choice" >
+		<div class="city-choice__main-cities">
+			<div class="city-choice__main-city">
+				Москва
+			</div>
+			<div class="city-choice__main-city">
+				Санкт-Петербург
+			</div>
+		</div>
+		<div class="city-choice__search search-city">
+			<div class="search-city__title">
+				Укажите город
+			</div>
+			<form class="search-city__form">
+				<input class="search-city__input custom-text-input" name="text" type="text" placeholder="Поиск по городу" autocomplete="off">
+				<button class="search-city__btn secondary-btn" type="button">Выбрать</button>				
+			</form>
+		</div>
+		<ul class="city-choice__list">
+			<li class="city-choice__list-item">
+				Орёл
+			</li>
+			<li class="city-choice__list-item">
+				Пенза
+			</li>
+			<li class="city-choice__list-item">
+				Пермь
+			</li>
+			<li class="city-choice__list-item">
+				Ростов-на-Дону
+			</li>
+			<li class="city-choice__list-item">
+				Рязань
+			</li>
+			<li class="city-choice__list-item">
+				Самара
+			</li>
+			<li class="city-choice__list-item">
+				Саратов
+			</li>
+			<li class="city-choice__list-item">
+				Севастополь
+			</li>
+			<li class="city-choice__list-item">
+				Симферополь
+			</li>
+			<li class="city-choice__list-item">
+				Сочи
+			</li>
+			<li class="city-choice__list-item">
+				Старый Оскол
+			</li>
+			<li class="city-choice__list-item">
+				Ступино
+			</li>
+			<li class="city-choice__list-item">
+				Орёл
+			</li>
+			<li class="city-choice__list-item">
+				Пенза
+			</li>
+			<li class="city-choice__list-item">
+				Пермь
+			</li>
+			<li class="city-choice__list-item">
+				Ростов-на-Дону
+			</li>
+			<li class="city-choice__list-item">
+				Рязань
+			</li>
+			<li class="city-choice__list-item">
+				Самара
+			</li>
+			<li class="city-choice__list-item">
+				Саратов
+			</li>
+			<li class="city-choice__list-item">
+				Севастополь
+			</li>
+			<li class="city-choice__list-item">
+				Симферополь
+			</li>
+			<li class="city-choice__list-item">
+				Сочи
+			</li>
+			<li class="city-choice__list-item">
+				Старый Оскол
+			</li>
+			<li class="city-choice__list-item">
+				Ступино
+			</li>
+			<li class="city-choice__list-item">
+				Орёл
+			</li>
+			<li class="city-choice__list-item">
+				Пенза
+			</li>
+			<li class="city-choice__list-item">
+				Пермь
+			</li>
+			<li class="city-choice__list-item">
+				Ростов-на-Дону
+			</li>
+			<li class="city-choice__list-item">
+				Рязань
+			</li>
+			<li class="city-choice__list-item">
+				Самара
+			</li>
+			<li class="city-choice__list-item">
+				Саратов
+			</li>
+			<li class="city-choice__list-item">
+				Севастополь
+			</li>
+			<li class="city-choice__list-item">
+				Симферополь
+			</li>
+			<li class="city-choice__list-item">
+				Сочи
+			</li>
+			<li class="city-choice__list-item">
+				Старый Оскол
+			</li>
+			<li class="city-choice__list-item">
+				Ступино
+			</li>
+		</ul>
+	</div>	
+</div>
+<!-- /Modals-->
+
+<script src="files/libs/jquery.min.js"></script>
+<script src="files/libs/dynamic_adapt.js"></script>
+<script src="files/libs/swiper-bundle.min.js"></script>
+<script src="files/libs/ion.rangeSlider.min.js"></script>
+<script src="files/libs/fancybox.min.js"></script>
+<script src="files/libs/inputmask.min.js"></script>
+
+<script src="js/app.js"></script> 
+        </div>   
+    </body>
+</html>
