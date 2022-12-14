@@ -2,12 +2,6 @@ window.onload = function () {
 
 	// Кнопки в шапке
 
-	$(".header-search-btn-js").click(function (e) {
-		e.preventDefault();
-		$(this).toggleClass("active");
-		$(".body-header__search").slideToggle().find('input').focus();
-	});
-
 	$(".mob-phone-js").click(function () {		
 		$(this).toggleClass("active");
 		$(".body-header__column--info--js").slideToggle();
@@ -85,19 +79,6 @@ window.onload = function () {
 		  });
 	});
 
-	const swiperExpertHelp = new Swiper('.expert-help__swiper', {
-		slidesPerView: 1,
-		loop: true,
-		autoplay: {
-			delay: 5000,
-		},
-		pagination: {
-		  el: '.expert-help__pagination',
-		  clickable: true,
-		},
-
-	});
-
 	const swiperProductThumbs = new Swiper('.product-thumbs__swiper', {
 
 		slidesPerView: 'auto',
@@ -124,7 +105,6 @@ window.onload = function () {
 		},
 
 	});
-
 
 // Аккардион FAQ
 	$('.faq__btn').click(function(){
@@ -179,6 +159,27 @@ window.onload = function () {
 		let parent = $(this).parents('.category-filter__item');
 		parent.children(".category-filter__body").slideToggle();
 	});
+
+// Позиционированиz в горизонтальной карточке
+	if (($(document).width() > 750)) {
+		$('.prod-item--horizontal .prod-item__available').each(function(){	
+			let labels = $(this).parents('.prod-item__body').find('.prod-item__labels');		
+			if (labels.length >= 1) {
+				let labelsWidth = labels.width();
+				let labelsPos = labels.position();
+				$(this).css('left', labelsWidth + labelsPos.left + 23);
+			}		
+		});
+		$('.prod-item--horizontal .prod-item__vendor-code').each(function(){	
+			let vendor = $(this).parents('.prod-item__body').find('.prod-item__vendor');		
+			if (vendor.length >= 1) {
+				let vendorWidth = vendor.width();
+				let vendorPos = vendor.position();
+				$(this).css('left', vendorWidth + vendorPos.left + 23);
+			}		
+		});
+	}
+
 
 // Кастомный ползунок
 	function currencyFormat(num) {
@@ -269,31 +270,6 @@ window.onload = function () {
 		$.fancybox.close();
 	});
 	$.fancybox.defaults.backFocus = false;
-	// const linkModal = document.querySelectorAll(link);
-
-	// function addData() {
-	// 	linkModal.forEach(element => {
-	// 		element.addEventListener('click', () => {
-	// 			let modal = document.querySelector(element.getAttribute("href"));
-	// 			const data = element.dataset;
-
-	// 			function setValue(val, elem) {
-	// 				if (elem && val) {
-	// 					const el = modal.querySelector(elem);
-	// 					el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
-	// 				}
-	// 			}
-
-	// 			setValue(data.title, '.ttu');
-	// 			setValue(data.text, '.after-headline');
-	// 			setValue(data.btn, '.btn');
-	// 			setValue(data.order, '.order');
-	// 		});
-	// 	});
-	// }
-
-	// if (linkModal) addData();
-
 
 // mask for input
 let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));

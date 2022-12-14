@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-	<title>Каталог</title>
+	<title>Каталог - Горизонтальная карточка</title>
 	<meta charset="UTF-8">
 
 	<link rel="shortcut icon" href="favicon.ico">
@@ -305,39 +305,202 @@
                 <div class="container">
                     <div class="page__row">
                         <aside class="page__sidebar sidebar">
-                            <div class="category-filter">
+                            
+                            <form class="sidebar__filter category-filter">
                                 <button class="category-filter__close-btn category-filter__close-btn--js" type="button">
                                     <svg class="category-filter__close-btn-icon icon-svg">
                                         <use xlink:href="img/icons/sprite-icons.svg#close"></use>
                                     </svg>
                                 </button>
-                                <div class="sidebar__category category-sidebar">
-                                    <ul class="category-sidebar__list">
-                                        <li class="category-sidebar__item"><span class="category-sidebar__link active">Розетки Werkel</span></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Выключатели Werkel</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Favorit</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Snabb</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Palacio</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Antik</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Stark</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Stream</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Elite</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Platinum</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Acrylic</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Aluminium</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Fiore</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Hammer</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Diamant</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Рамки Metallic</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Werkel Retro</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Накладные механизмы</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Удлинители</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Терморегуляторы</a></li>
-                                        <li class="category-sidebar__item"><a href="#" class="category-sidebar__link">Клеммы соединительные</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Цвет
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Белый</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Слоновая кость</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Серебро</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Черный</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Цена
+                                        </button>                                            
+                                    </legend>                                    
+                                    <div class="category-filter__body">
+                                        <div class="category-filter__slider filter-slider range-wrap">                                
+                                            <div class="mse2_number_inputs filter-slider__values  ">
+                                                <div class="filter-slider__value">
+                                                    <input class="filter-slider__input" type="text" name="" value="190" />
+                                                </div>
+                                                <div class="filter-slider__value">
+                                                    <input class="filter-slider__input" type="text" name="" value="360" />
+                                                </div>
+                                            </div>
+                                            <!-- <div class="mse2_number_slider"></div> --> 
+                                            <!-- Не смогла у себя запустить библиотеку, поэтому статино вывела слайдер и стиизовала его -->
+                                            <div class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 6.26208%; width: 93.7379%;"></div>
+                                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 6.26208%;"></span>
+                                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </fieldset>
+                                
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Тип механизма
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">W1155101</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Акустическая розетка</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Диммер</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Заглушка</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title active" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Степень пылевлагозащиты
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">IP20</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">IР44</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Количество клавиш
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">1</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">2</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Наличие подсветки
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Да</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">Нет</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Количество гнезд
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">1</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">2</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                <fieldset class="category-filter__item">
+                                    <legend>
+                                        <button class="category-filter__title" type="button">
+                                            <svg class="icon-svg category-filter__icon" >
+                                                <use xlink:href="img/icons/sprite-icons.svg#chevron"></use>
+                                            </svg>
+                                            Тип лампы
+                                        </button>                                            
+                                    </legend>
+                                    <div class="category-filter__body" style="display: none;">
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">1</span>
+                                        </label>
+                                        <label class="category-filter__input custom-checkbox">
+                                            <input class="custom-checkbox__input" value="" name="checkbox" type="checkbox">
+                                            <span class="custom-checkbox__text form-check-label">2</span>
+                                        </label>
+                                    </div>    
+                                </fieldset>
+                                
+                                
+                            </form>
                             <div class="sidebar__bottom">
                                 <div class="sidebar__consultant consultant-block">
                                     <div class="consultant-block__name">
@@ -384,60 +547,17 @@
                                         <a href="/">Главная</a>
                                     </li>
                                     <li class="breadcrumbs__item">
-                                        <span>Каталог</span>
+                                        <a href="/">Каталог</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <span>Розетки</span>
                                     </li>                                    
                                 </ol>                                
                             </nav>
                             <div class="page__head">
-                                <h1>Каталог</h1>
-                                <span class="page__head-amount">2 217 товаров</span>
+                                <h1>Розетки</h1>
+                                <span class="page__head-amount">217 товаров</span>
                             </div>
-
-                            <div class="category__tabs tabs-category">
-                                <div class="row g-2">
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Розетки</span> 
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Выключатели</span> 
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Рамки</span> 
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Накладные механизмы</span> 
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Удлинители</span> 
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Термо-регуляторы</span> 
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Клеммы соединит-ые</span> 
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-xl-2">
-                                        <a class="tabs-category__link" href="#">                                                
-                                            <span>Werkel Retro</span> 
-                                        </a>
-                                    </div>
-                                </div>    
-                            </div>
-
                             <form class="category__line-filter line-filter">
                                 <fieldset class="line-filter__item">
                                     <select class="line-filter__sort">
@@ -487,13 +607,13 @@
                             </form>
 
                             <button class="category__filter-btn filter-btn-js" type="button">
-                                Категории
+                                Фильтр
                             </button>
 
                             <div class="category__catalog products-catalog">
-                                <div class="products-catalog__wrap">
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                <div class="products-catalog__wrap products-catalog__wrap--horizontal">  
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -503,18 +623,18 @@
                                                         </picture>                                           
                                                     </a>
                                                     <!-- Теги "новинка" и прочее, если не стоит, не выводим -->
-                                                    <div class="prod-item__labels">
-                                                        <div class="prod-item__label prod-item__label--new">
+                                                    <!-- <div class="prod-item__labels">
+                                                        <div class="prod-item__label">
                                                             <svg class="prod-item__label-icon icon-svg">
-                                                                <use xlink:href="img/icons/sprite-icons.svg#star"></use>
+                                                                <use xlink:href="img/icons/sprite-icons.svg#led"></use>
                                                             </svg>
-                                                            Новинка</div>
-                                                    </div>
+                                                            Светодиондный LED</div>
+                                                    </div> -->
                                                     <!-- Конец Теги "новинка" и прочее -->
                                                     <!-- Блок кнопок "Добавить в избранное" и "Добавить к сравнению" У активного пункта (пользователь выбрал) должен быть класс active -->
                                                     <div class="prod-item__add-to">
                                                         <div class="comparison comparison-default" data-id="[[+id]]" data-list="[[+list]]">
-                                                            <a class="prod-item__add-to-btn add-to-compare comparison-add" title="Добавить в сравнение">
+                                                            <a class="prod-item__add-to-btn add-to-compare comparison-add active" title="Добавить в сравнение">
                                                                 <svg class="prod-item__add-to-btn-icon icon-svg">
                                                                     <use xlink:href="img/icons/sprite-icons.svg#prod-compare"></use>
                                                                 </svg>
@@ -530,29 +650,29 @@
                                                     </div>                                                   
                                                     <!-- Конец блока "Добавить в избранное" и "Добавить к сравнению"  -->
                                                     <!-- Лейбл скидки. Если скидочной цены и скидки нет, то не выводим -->
-                                                    <!-- <div class="prod-item__discount">
+                                                    <div class="prod-item__discount">
                                                         -30%
-                                                    </div> -->
+                                                    </div>
                                                     <!-- Конец лейбла скидки -->
                                                 </div> 
                                                 <!-- Цены. Если скидки нет, то выводиться только цена "prod-item__price", если скидка есть, то  "prod-item__price prod-item__price--new" и "prod-item__price prod-item__price--old"-->
-                                                <div class="prod-item__price">383руб.</div>
-                                                <!-- <div class="prod-item__price prod-item__price--new">5 400 <span>₽</span></div>
-                                                <div class="prod-item__price prod-item__price--old">60 900 <span>₽</span></div> -->
+                                                <!-- <div class="prod-item__price">399руб.</div> -->
+                                                <div class="prod-item__price prod-item__price--new">399<span> ₽</span></div>
+                                                <div class="prod-item__price prod-item__price--old">734<span> ₽</span></div>
                                                 <div class="prod-item__info">
-                                                    <div class="prod-item__vendor">werkel</div>
+                                                    <!-- <div class="prod-item__vendor">werkel</div> -->
                                                     <div class="prod-item__available prod-item__available--many">
                                                         Много на складе
                                                     </div>
                                                     <!-- <div class="prod-item__available prod-item__available--few">
                                                         Заканчивается
-                                                    </div>
-                                                    <div class="prod-item__available prod-item__available--not">
+                                                    </div> -->
+                                                    <!-- <div class="prod-item__available prod-item__available--not">
                                                         Ждем поступления
                                                     </div> -->
                                                 </div>
                                                 <div class="prod-item__vendor-code">Артикул: 643797492</div>
-                                                <div class="prod-item__title">Выключатель одноклавишный Werkel W1110062 айвори матовый</div>
+                                                <div class="prod-item__title">Розетка влагозащищенная с заземлением с защитной крышкой Розетка влагозащищенная с заземлением с защитной крышкой</div>
                                             </div>                                            
                                             <div class="prod-item__bottom bottom-prod">
                                                 <div class="bottom-prod__item prod-item__counter custom-counter">
@@ -578,8 +698,8 @@
                                             </div>    
                                         </form>
                                     </div>
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -663,10 +783,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -750,10 +869,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -837,10 +955,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -924,9 +1041,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1010,9 +1127,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1096,10 +1213,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1183,10 +1299,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1270,10 +1385,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1357,9 +1471,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1443,9 +1557,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>                                        
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1529,10 +1643,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1616,10 +1729,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1703,10 +1815,9 @@
                                                 </button>                                                
                                             </div>    
                                         </form>
-                                    </div>
-
-                                    <div class="products-catalog__item ms2_product">
-                                        <form class="prod-item ms2_form">
+                                    </div>    
+                                    <div class="products-catalog__item products-catalog__item--horizontal ms2_product">
+                                        <form class="prod-item prod-item--horizontal ms2_form">
                                             <div class="prod-item__body">
                                                 <div class="prod-item__picture">
                                                     <a class="prod-item__img-wrap" href="#" >   
@@ -1792,6 +1903,7 @@
                                         </form>
                                     </div>
                                     
+                                    
                                 </div>
                                 <div class="products-catalog__more-btn">
                                     <button class="more-btn" type="button">Показать еще</button>
@@ -1831,6 +1943,7 @@
                                 </div>
                                 <p>Разработчики Werkel при создании продукции ориентируются на удобство потребителей и реализуют решения, требующие минимум навыков и усилий при монтаже.</p>
                             </div>
+
                         </div>
                     </div>
 
