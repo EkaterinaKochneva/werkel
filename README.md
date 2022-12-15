@@ -2,3 +2,9 @@
 2. https://ekaterinakochneva.github.io/werkel/category.html
 3. https://ekaterinakochneva.github.io/werkel/category-horizontal.html
 4. https://ekaterinakochneva.github.io/werkel/card.html
+5. https://ekaterinakochneva.github.io/werkel/cart.html
+6. https://ekaterinakochneva.github.io/werkel/kontakty.html
+7. https://ekaterinakochneva.github.io/werkel/garantiya.html
+8. https://ekaterinakochneva.github.io/werkel/payment.html
+9. https://ekaterinakochneva.github.io/werkel/delivery.html
+10. https://ekaterinakochneva.github.io/werkel/about.html
