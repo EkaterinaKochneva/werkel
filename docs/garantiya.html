@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-	<title>Корзина</title>
+	<title>Гарантия</title>
 	<meta charset="UTF-8">
 
 	<link rel="shortcut icon" href="favicon.ico">
@@ -287,231 +287,122 @@
 		</div>
 	</div>
 </header>
-            <main class="page cart">
+            <main class="page">
                 <div class="container">
-                    <nav class="page__breadcrumbs breadcrumbs" aria-label="breadcrumb">
-                        <ol class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
-                                <a href="/">Главная</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <span>Корзина</span>
-                            </li>                                    
-                        </ol>                                
-                    </nav>             
-                    <div class="page__head">
-                        <h1>Корзина</h1>
-                    </div>
-                    <div class="cart__row">
-                        <div class="cart__col cart__col--content">
-                            <div class="cart__content">
-                                <form action="" class="products-cart">
-                                    <div class="products-cart__item">
-                                        <div class="products-cart__body">
-                                            <div class="products-cart__picture">
-                                                <a class="products-cart__img-wrap" href="#" >
-                                                    <picture>
-                                                        <img class="products-cart__img" src="img/tovar-14.jpg" alt="">
-                                                    </picture>                                                
-                                                </a> 
-                                            </div>  
-                                            <div class="products-cart__name-block">
-                                                <a class="products-cart__title" href="#">Розетка с заземлением, шторками и USB тип A+C W1171701 белая</a>                                                                                   
-                                                <div class="products-cart__vendor">Артикул: MRL 1013</div>  
-                                            </div>                                                                                  
+                    <div class="page__row">
+                        <aside class="page__sidebar sidebar">
+                            <nav class="sidebar__menu menu-sidebar">
+                                <ul class="menu-sidebar__list">
+                                    <!-- Активный пункт меню/текущая страница должны быть в span с классом active -->
+                                    <li class="menu-sidebar__item">
+                                        <a class="menu-sidebar__link" href="#">Оплата</a>
+                                    </li>
+                                    <li class="menu-sidebar__item">
+                                        <a class="menu-sidebar__link" href="#">Доставка</a>
+                                    </li>
+                                    <li class="menu-sidebar__item">
+                                        <a class="menu-sidebar__link" href="#">Установка</a>
+                                    </li>
+                                    <li class="menu-sidebar__item">
+                                        <span class="menu-sidebar__link active">Гарантии</span>
+                                    </li>                                    
+                                    <li class="menu-sidebar__item">
+                                        <a class="menu-sidebar__link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="menu-sidebar__item">
+                                        <a class="menu-sidebar__link" href="#">О компании</a>
+                                    </li>
+                                    <li class="menu-sidebar__item">
+                                        <a class="menu-sidebar__link" href="#">Дизайнерам</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        <div class="page__body">
+                            <nav class="page__breadcrumbs breadcrumbs" aria-label="breadcrumb">
+                                <ol class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/">Главная</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <span>Гарантии</span>
+                                    </li>                                    
+                                </ol>                                
+                            </nav>
+                            <div class="page__head">
+                                <h1>Гарантии</h1>
+                            </div>
+                            <div class="garantiya">
+                                <div class="garantiya__row">
+                                    <div class="garantiya__col garantiya__col--info">
+                                        <div class="garantiya__slogan slogan">
+                                            Мы дорожим своей репутацией, поэтому относимся с большой ответственностью к гарантийному и сервисному обслуживанию.
                                         </div>
-                                        <div class="products-cart__price-wrap">
-                                            <div class="products-cart__discount">
-                                                -45%
+                                        <div class="garantiya__border-block border-block">
+                                            <div class="border-block__title">Гарантийное обслуживание</div>
+                                            <div class="border-block__text">
+                                                В случаи поломки изделия в течение грантийного срока вы можете обратиться к нам и получить бесплатный ремонт. Для этого нужно:
                                             </div>
-                                            <div class="products-cart__price-block products-cart__price-block--for-one">
-                                                <!-- <div class="products-cart__price">3 930 ₽</div> -->
-                                                <div class="products-cart__price products-cart__price--new">2 080 ₽</div>  
-                                                <div class="products-cart__price products-cart__price--old">3 000 ₽</div>
-                                            </div> 
-                                            <div class="products-cart__counter">
-                                                <div class="custom-counter">       
-                                                    <button class="custom-counter__btn custom-counter__btn--minus" type="button" disabled="disabled" data-type="minus" >
-                                                        <svg class="custom-counter__btn-icon icon-svg">
-                                                            <use xlink:href="img/icons/sprite-icons.svg#minus"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <input class="custom-counter__input" type="text" name="count" value="2">
-                                                    <button  class="custom-counter__btn custom-counter__btn--plus" type="button" data-type="plus">
-                                                        <svg class="custom-counter__btn-icon icon-svg">
-                                                            <use xlink:href="img/icons/sprite-icons.svg#plus"></use>
-                                                        </svg>
-                                                    </button>                                        
-                                                </div>
-                                            </div>  
-                                            <div class="products-cart__price-block">
-                                                <!-- <div class="products-cart__price">3 930 ₽</div> -->
-                                                <div class="products-cart__price products-cart__price--new">4 160 ₽</div>  
-                                                <div class="products-cart__price products-cart__price--old">5 000 <span>₽</span></div>
-                                            </div>    
-                                            
+                                            <ul class="border-block__list">
+                                                <li class="border-block__list-item">
+                                                    <svg class="border-block__list-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#check"></use>
+                                                    </svg>
+                                                    Предоствить чек или сообщить почту или номер телефон, укзанный при оформлении зказа
+                                                </li>
+                                                <li class="border-block__list-item">
+                                                    <svg class="border-block__list-icon icon-svg">
+                                                        <use xlink:href="img/icons/sprite-icons.svg#box"></use>
+                                                    </svg>
+                                                    Привезти товар к нам на склад или отправить его транспортной компанией
+                                                </li>
+                                            </ul>
+                                            <div class="border-block__text">
+                                                После товар отправляется на экспертизу и ремонт. Если ремонт невозможен, мы обменяем товар на аналогичный либо вернем деньги за покупку.
+                                            </div>
                                         </div>
-                                        <button class="products-cart__delete" type="button">
-                                            <svg class="products-cart__delete-icon icon-svg">
-                                                <use xlink:href="img/icons/sprite-icons.svg#delete"></use>
+
+                                    </div>
+                                    <div class="garantiya__col garantiya__col--terms">
+                                        <div class="icon-title">
+                                            <svg class="icon-title__icon icon-svg">
+                                                <use xlink:href="img/icons/sprite-icons.svg#exchange"></use>
                                             </svg>
-                                        </button>
-        
+                                            Возврат и обмен товара
+                                        </div>
+                                        <ul class="garantiya__list marker-list">
+                                            <li>Покупатель вправе отказаться от товара в любое время до его передачи покупателю.</li>
+                                            <li>Вернуть и обменять товар надлежащего качества возможно в течение 21 календарного дня*, не включая день покупки. Возврат товара производится в офисе по предварительному согласованию с менеджером. Мы гарантируем возврат денег за вычетом стоимости доставки товара. Возврат товара надлежащего качества возможен в случае, если сохранена упаковка (коробка, ярлыки, документация), товар не был в употреблении, не производилась его сборка, сохранен товарный вид и потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного товара.
+                                            </li>
+                                        </ul>
+                                        <div class="icon-title">
+                                            <svg class="icon-title__icon icon-svg">
+                                                <use xlink:href="img/icons/sprite-icons.svg#warranty"></use>
+                                            </svg>
+                                            Гарантия
+                                        </div>
+                                        <ul class="garantiya__list marker-list">
+                                            <li>Гарантия на товар подразумевает под собой его бесплатный ремонт либо замену на аналогичный (подобный по параметрам) товар в случае невозможности ремонта в течение гарантийного срока.</li>
+                                            <li>В гарантийный ремонт принимаются светильники при наличии документов, подтверждающих факт покупки (кассовый чек и товарный чек или товарная накладная с указанием даты продажи и артикулом товара).
+                                            </li>
+                                        </ul>
+                                        <div class="icon-title">
+                                            <svg class="icon-title__icon icon-svg">
+                                                <use xlink:href="img/icons/sprite-icons.svg#socket"></use>
+                                            </svg>
+                                            Ответственность
+                                        </div>
+                                        <ul class="garantiya__list marker-list">
+                                            <li>Продавец не несет ответственности за ущерб, причиненный покупателю вследствие ненадлежащего использования товаров, заказанных на сайте</li>
+                                            
+                                        </ul>
                                     </div>
 
-                                    <div class="products-cart__item">
-                                        <div class="products-cart__body">
-                                            <div class="products-cart__picture">
-                                                <a class="products-cart__img-wrap" href="#" >
-                                                    <picture>
-                                                        <img class="products-cart__img" src="img/tovar-15.jpg" alt="">
-                                                    </picture>                                                
-                                                </a> 
-                                            </div>  
-                                            <div class="products-cart__name-block">
-                                                <a class="products-cart__title" href="#">Розетка с заземлением, шторками и USB Werkel W1171501 белая</a>                                                                                   
-                                                <div class="products-cart__vendor">Артикул: 70127/1 хром</div>  
-                                            </div>                                                                                  
-                                        </div>
-                                        <div class="products-cart__price-wrap">
-                                            <!-- <div class="products-cart__discount">
-                                                -45%
-                                            </div> -->
-                                            <div class="products-cart__price-block products-cart__price-block--for-one">
-                                                <div class="products-cart__price">3 930 ₽</div>
-                                                <!-- <div class="products-cart__price products-cart__price--new">2 080 ₽</div>  
-                                                <div class="products-cart__price products-cart__price--old">3 000 ₽</div> -->
-                                            </div> 
-                                            <div class="products-cart__counter">
-                                                <div class="custom-counter">       
-                                                    <button class="custom-counter__btn custom-counter__btn--minus" type="button" disabled="disabled" data-type="minus" >
-                                                        <svg class="custom-counter__btn-icon icon-svg">
-                                                            <use xlink:href="img/icons/sprite-icons.svg#minus"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <input class="custom-counter__input" type="text" name="count" value="1">
-                                                    <button  class="custom-counter__btn custom-counter__btn--plus" type="button" data-type="plus">
-                                                        <svg class="custom-counter__btn-icon icon-svg">
-                                                            <use xlink:href="img/icons/sprite-icons.svg#plus"></use>
-                                                        </svg>
-                                                    </button>                                        
-                                                </div>
-                                            </div>  
-                                            <div class="products-cart__price-block">
-                                                <div class="products-cart__price">3 930 ₽</div>
-                                                <!-- <div class="products-cart__price products-cart__price--new">4 160 ₽</div>  
-                                                <div class="products-cart__price products-cart__price--old">5 000 <span>₽</span></div> -->
-                                            </div>    
-                                            
-                                        </div>
-                                        <button class="products-cart__delete" type="button">
-                                            <svg class="products-cart__delete-icon icon-svg">
-                                                <use xlink:href="img/icons/sprite-icons.svg#delete"></use>
-                                            </svg>
-                                        </button>
-        
-                                    </div>
-                                </form>
-                                
-                            </div>
-                            <div class="cart__total-for-mobile"></div>
-                            <div class="tabs main-tabs cart__tabs">
-                                <div class="tabs__caption  main-tabs__caption">
-                                    <button class="tabs__btn main-tabs__btn active" type="button">Оформление заказа</button>
-                                    <button class="tabs__btn main-tabs__btn" type="button">Быстрый заказ</button>
-                                </div>
-                                <div class="tabs__wrap  main-tabs__wrap">
-                                    <div class="tabs__content main-tabs__content active">
-                                        <form class="cart__order-form order-form" action="">
-                                            <fieldset class="order-form__item">
-                                                <legend class="order-form__title">1. Данные покупателя</legend>
-                                                <div class="order-form__buyer-data">
-                                                    <input class="order-form__input custom-text-input" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
-                                                    <input class="order-form__input custom-text-input" name="Email" type="email" placeholder="Email" required="required"/>
-                                                    <input class="order-form__input custom-text-input" name="Имя" type="text" placeholder="Имя" required="required"/>
-                                                </div>
-                                            </fieldset>
-                                            <fieldset class="order-form__item">
-                                                <legend class="order-form__title">2. Выберите способ доставки</legend>                                                
-                                                <label class="order-form__input-radio custom-checkbox">
-                                                    <input class="custom-checkbox__input" value="Яндекс GO" name="delivery" type="radio">
-                                                    <span class="custom-checkbox__text form-check-label">Яндекс GO такси по Москве <span class="bold-text">(486 ₽, от 2-х часов)</span></span>
-                                                </label>
-                                                <label class="order-form__input-radio custom-checkbox">
-                                                    <input class="custom-checkbox__input" value="Самовывоз" name="delivery" type="radio">
-                                                    <span class="custom-checkbox__text form-check-label">Самовывоз из магазина <span class="order-form__faded-text">Московская область, г. Подольск, д. Борисовка, территория «НКН-Строй», строение 1</span></span>
-                                                </label>
-                                                <label class="order-form__input-radio custom-checkbox">
-                                                    <input class="custom-checkbox__input" value="Достависта" name="delivery" type="radio" checked>
-                                                    <span class="custom-checkbox__text form-check-label">Курьерская служба “Достависта” по Москве  <span class="bold-text">(600 ₽, в течение дня. От 5000 ₽ Бесплатно)</span></span>                                                    
-                                                </label>
-                                                <input class="order-form__input custom-text-input order-form__input--delivery-addres" name="Адрес доставки" type="text" placeholder="Город, улица, дом, квартира" required="required"/>
-                                                <label class="order-form__input-radio custom-checkbox">
-                                                    <input class="custom-checkbox__input" value="В пункт выдачи" name="delivery" type="radio">
-                                                    <span class="custom-checkbox__text form-check-label">В пункт выдачи <span class="bold-text">(400 ₽, 4 дня)</span> <a class="order-form__link underline-link" href="#">Выбрать пункт выдачи</a></span>
-                                                </label>
-                                                <label class="order-form__input-radio custom-checkbox">
-                                                    <input class="custom-checkbox__input" value="Курьер" name="delivery" type="radio">
-                                                    <span class="custom-checkbox__text form-check-label">Курьером <span class="bold-text">(600 ₽, 7 дней)</span></span>
-                                                </label>                                                
-                                            </fieldset>
-                                            <fieldset class="order-form__item">
-                                                <legend class="order-form__title">3. Выберите способ оплаты</legend>                                                
-                                                <label class="order-form__input-radio custom-checkbox">
-                                                    <input class="custom-checkbox__input" value="Оплата картой" name="pay" type="radio">
-                                                    <span class="custom-checkbox__text form-check-label">Картой на сайте</span>
-                                                </label>
-                                                <label class="order-form__input-radio custom-checkbox">
-                                                    <input class="custom-checkbox__input" value="Оплата при получении" name="pay" type="radio" checked>
-                                                    <span class="custom-checkbox__text form-check-label">Наличными или картой при получении</span>
-                                                </label>
-                                                                                            
-                                            </fieldset>
-                                            <button class="order-form__btn secondary-btn" type="submit">Подтвердить заказ</button>
-                                            <div class="order-form__polite">Подтверждая заказ, Вы соглашаетесь с условиями <a class="underline-link" href="#">политики конфиденциальности</a> и <a class="underline-link" href="#">правилами продажи</a>.</div>
-                                        </form>
-                                        
-                                    </div>
-                                    <div class="tabs__content main-tabs__content">
-                                        <form class="cart__order-one-click order-one-click">
-                                            <div class="order-one-click__text">
-                                                Оставьте свои контактные данные и наш менеджер перезвонит вам в рабочее время и уточнит все детали.
-                                            </div>
-                                            <input class="order-one-click__input custom-text-input" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
-                                            <button class="order-one-click__btn secondary-btn" type="submit">Оформить заказ</button>
-                                            <div class="order-form__polite">Оформляя заказ, Вы соглашаетесь с условиями <a class="underline-link" href="#">политики конфиденциальности</a> и <a class="underline-link" href="#">правилами продажи</a>.</div>
-                                        </form>
-                                    </div>
                                 </div>
                             </div>
-                            
                         </div>
-                        <div class="cart__col cart__col--total">
-                            <div class="cart__total total-cart" data-da=".cart__total-for-mobile,991,1">
-                                <div class="total-cart__amount">
-                                    <div class="total-cart__amount-key">Итого:</div>
-                                    <div class="total-cart__amount-val">8 090 ₽</div>
-                                </div>
-                                <div class="total-cart__row">
-                                    <div class="total-cart__key">Товары, 3 шт.</div>
-                                    <div class="total-cart__val">8 930 ₽</div>
-                                </div>
-                                <div class="total-cart__row total-cart__row--var">
-                                    <div class="total-cart__key">Скидка</div>
-                                    <div class="total-cart__val">840 ₽</div>
-                                </div>
-                                <div class="total-cart__row">
-                                    <div class="total-cart__key">Кол-во постов под механизмы</div>
-                                    <div class="total-cart__val">54</div>
-                                </div>
-                                <div class="total-cart__row">
-                                    <div class="total-cart__key">Кол-во механизмов</div>
-                                    <div class="total-cart__val">52</div>
-                                </div>
-                            </div>
-                        </div>                        
+                    </div>                    
 
-                    </div>
                 </div><!-- /container --> 
                 
             </main>
