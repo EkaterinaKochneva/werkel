@@ -2562,6 +2562,10 @@ main ul:not([class]) > li:before {
   left: 0;
 }
 
+.popular-categories-for-mobile .popular-categories {
+  margin-top: 0;
+}
+
 .header {
   background-color: #fff;
   margin-bottom: 20px;
